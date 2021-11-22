@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Multer Base</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Upload Single File -->
+        <div class="centered center-div theGoodShading soft-corners cloud-gradient top-space bottom-space">
+            <div class="centered padding-sm indigo-gradient soft-corners-t white">
+                <p class="header-text">Upload File</p>
+            </div>
+            <div class="content-card centered">
+
+                <form class="" id="singleFileForm" method="POST" action="/uploadfile" enctype="multipart/form-data">
+                <div class="padding-sm">
+                    <div class="">
+                    <input class="centered" type="file" id="singleFile" name="singleFile" placeholder="File Name">
+                    <!-- <input class="centered" type="file" id="inputFile" name="inputFile" placeholder="Comment"> -->
+                </div>
+                <div class="centered">
+                    <!-- <button id = "selectFileBtn" name="selectFileBtn" class="save-btn magenta-gradient white theGoodShading">Select</button> -->
+                    <button id="uploadFileBtn" name="uploadFileBtn" class="save-btn magenta-gradient white theGoodShading">Upload</button>
+                </div>
+                </div>
+            </form>
+            </div>
+        
+        </div>
+        <!-- Upload Multi File -->
+        <div class="centered center-div theGoodShading soft-corners cloud-gradient top-space bottom-space">
+            <div class="centered padding-sm indigo-gradient soft-corners-t white">
+                <p class="header-text">Upload Multi Files</p>
+            </div>
+            <div class="content-card centered">
+
+                <form class="" id="multiFileForm" method="POST" action="/uploadmultifile" enctype="multipart/form-data">
+                <div class="padding-sm">
+                    <div class="">
+                    <input class="centered" type="file" id="multifile" name=multifile" placeholder="Files ">
+                    <!-- <input class="centered" id="multiInputFile" name="multiInputFile" placeholder="Comment"> -->
+                </div>
+                <div class="centered">
+                    <!-- <button id = "selectFileBtn" name="selectFileBtn" class="save-btn magenta-gradient white theGoodShading">Select</button> -->
+                    <button id="uploadFileBtn" name="uploadFileBtn" class="save-btn magenta-gradient white theGoodShading">Upload</button>
+                </div>
+                </div>
+            </form>
+            </div>
+        
+        </div>
+        <!-- Upload  Photo-->
+        <div class="centered center-div theGoodShading soft-corners cloud-gradient top-space bottom-space">
+            <div class="centered padding-sm indigo-gradient soft-corners-t white">
+                <p class="header-text">Upload Image</p>
+            </div>
+            <div class="content-card centered">
+
+                <form class="" name="photoFileForm" method="POST" action="/uploadimage" enctype="multipart/form-data">
+                <div class="padding-sm">
+                    <div class="">
+                    <input class="centered" type="file" accept="image/*" id="imageFile" name="imageFile" placeholder="Image File" required=true>
+                    <input class="centered" type="text" id="name" name="name" placeholder="img name" required=true>
+                </div>
+                <div class="centered">
+                    <!-- <button id = "selectFileBtn" name="selectFileBtn" class="save-btn magenta-gradient white theGoodShading">Select</button> -->
+                    <button id="uploadFileBtn" name="uploadFileBtn" class="save-btn magenta-gradient white theGoodShading">Upload</button>
+                </div>
+                </div>
+            </form>
+            </div>
+        
+        </div>
+        <!-- View  Images-->
+        <div class="centered center-div theGoodShading soft-corners cloud-gradient top-space bottom-space">
+            <div class="centered padding-sm indigo-gradient soft-corners-t white">
+                <p class="header-text">View Images:</p>
+            </div>
+            
+            
+            </div>
+            <%- include("imageviewer")-%>
+        
+        </div>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- jQuery -->
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+        <script src="index.js" async defer></script>
+    </body>
+</html>
